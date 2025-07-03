@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>私のポートフォリオ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#1E293B',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-gray-800/95 backdrop-blur-sm shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#home" class="text-xl font-bold text-primary nav-link">私のポートフォリオ</a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-white border-b-2 border-primary" data-section="home">Home</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white transition duration-300" data-section="about">About</a>
+                    <a href="#skills" class="nav-link text-gray-300 hover:text-white transition duration-300" data-section="skills">Skills</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-white transition duration-300" data-section="projects">Projects</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white transition duration-300" data-section="contact">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-800 border-t border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="nav-link block px-3 py-2 text-white bg-gray-700 rounded" data-section="home">Home</a>
+                <a href="#about" class="nav-link block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded transition duration-300" data-section="about">About</a>
+                <a href="#skills" class="nav-link block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded transition duration-300" data-section="skills">Skills</a>
+                <a href="#projects" class="nav-link block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded transition duration-300" data-section="projects">Projects</a>
+                <a href="#contact" class="nav-link block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded transition duration-300" data-section="contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="section active pt-20 pb-0 px-4">
+        <!-- Hero Content -->
+        <div class="min-h-screen flex items-center justify-center">
+            <div class="max-w-7xl mx-auto text-center w-full py-16">
+                <div class="mb-8 animate-fade-in">
+                    <div class="w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden border-4 border-primary shadow-2xl hover:scale-105 transition-transform duration-300">
+                        <img src="./asset/Foto jas almamater.jpeg"
+                             alt="Muhammad Brillian Alif"
+                             class="w-full h-full object-cover object-[center_21%]">
+                    </div>
+                </div>
+                <h1 class="text-2xl sm:text-3xl font-bold mb-2 animate-slide-up text-primary">Muhammad Brillian Alif</h1>
+                <h2 class="text-3xl sm:text-5xl font-bold mb-4 animate-slide-up">Full Stack Developer</h2>
+                <p class="text-lg sm:text-xl text-gray-400 mb-8 max-w-2xl mx-auto animate-slide-up-delay">
+                    Pengembang web yang nggak cuma jago ngoding, tapi juga selalu update sama teknologi terkini.
+                    Punya pengalaman dalam berbagai bahasa pemrograman dan framework modern.
+                    Fokus pada pembuatan aplikasi web yang solid, cepat, dan scalable.
+                    Suka manfaatin tools AI buat tingkatin efisiensi dan hasil kerja yang lebih maksimal.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-delay mb-16">
+                    <a href="#projects" class="nav-link bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-lg transition duration-300 hover:scale-105 transform" data-section="projects">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="nav-link border border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg transition duration-300 hover:scale-105 transform" data-section="contact">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Skills Overview -->
+        <div class="w-full py-16 bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 scroll-animate">Core Technologies</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8">
+    <div class="text-center scroll-animate group">
+        <div class="mb-3 transition-all duration-300 group-hover:scale-110">
+            <img src="./asset/cpp.png" alt="C++" class="w-16 h-16 sm:w-20 sm:h-20 mx-auto object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300 drop-shadow-lg group-hover:drop-shadow-xl">
+        </div>
+        <p class="text-xs sm:text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-300">C++</p>
+    </div>
+
+    <div class="text-center scroll-animate group">
+        <div class="mb-3 transition-all duration-300 group-hover:scale-110">
+            <img src="./asset/php.png" alt="PHP" class="w-16 h-16 sm:w-20 sm:h-20 mx-auto object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300 drop-shadow-lg group-hover:drop-shadow-xl">
+        </div>
+        <p class="text-xs sm:text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-300">PHP</p>
+    </div>
+
+    <div class="text-center scroll-animate group">
+        <div class="mb-3 transition-all duration-300 group-hover:scale-110">
+            <img src="./asset/js.png" alt="JavaScript" class="w-16 h-16 sm:w-20 sm:h-20 mx-auto object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300 drop-shadow-lg group-hover:drop-shadow-xl">
+        </div>
+        <p class="text-xs sm:text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-300">JavaScript</p>
+    </div>
+
+    <div class="text-center scroll-animate group">
+        <div class="mb-3 transition-all duration-300 group-hover:scale-110">
+            <img src="./asset/python.png" alt="Python" class="w-16 h-16 sm:w-20 sm:h-20 mx-auto object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300 drop-shadow-lg group-hover:drop-shadow-xl">
+        </div>
+        <p class="text-xs sm:text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-300">Python</p>
+    </div>
+
+    <div class="text-center scroll-animate group">
+        <div class="mb-3 transition-all duration-300 group-hover:scale-110">
+            <img src="./asset/mysql.png" alt="MySQL" class="w-16 h-16 sm:w-20 sm:h-20 mx-auto object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300 drop-shadow-lg group-hover:drop-shadow-xl">
+        </div>
+        <p class="text-xs sm:text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-300">MySQL</p>
+    </div>
+
+    <div class="text-center scroll-animate group">
+        <div class="mb-3 transition-all duration-300 group-hover:scale-110">
+            <img src="./asset/ai.png" alt="AI Tools" class="w-16 h-16 sm:w-20 sm:h-20 mx-auto object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300 drop-shadow-lg group-hover:drop-shadow-xl">
+        </div>
+        <p class="text-xs sm:text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-300">AI Tools</p>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section pt-24 pb-16 px-4 min-h-screen">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-8 text-center scroll-animate">About Me</h1>
+            
+            <div class="grid md:grid-cols-2 gap-8 sm:gap-12 items-center mb-16">
+                <div class="scroll-animate h-[356px] overflow-hidden">
+                    <img src="./asset/Foto jas almamater.jpeg"
+                         alt="About Me"
+                         class="w-full h-full object-cover object-[center_26%] rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="scroll-animate">
+                    <h2 class="text-xl sm:text-2xl font-bold mb-4">Muhammad Brillian Alif - Full Stack Developer</h2>
+                    <p class="text-gray-400 mb-6 text-sm sm:text-base">
+                        Saya seorang full-stack developer yang beneran cinta sama dunia ngoding (member IMPHNEN). Udah berpengalaman main di beberapa bahasa pemrograman dan framework modern. 
+                        Selama perjalanan di software development, saya banyak belajar hal baru yang bikin bisa pecahkan masalah rumit dan bikin solusi yang kekinian.
+                    </p>
+                    <p class="text-gray-400 mb-6 text-sm sm:text-base">
+                        Fokus saya di web development pake PHP, JavaScript, sama Python. Jago juga urus database dan integrasi AI tools biar aplikasi makin jago.
+                        Target saya? Bikin aplikasi yang cepet, kuat, gampang dipakai, dan beneran bawa manfaat buat orang banyak.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Experience Timeline -->
+            <div class="mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-8 text-center scroll-animate">Experience</h2>
+                <div class="space-y-8">
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 transition-colors duration-300">
+                        <h3 class="text-lg sm:text-xl font-bold text-primary mb-2">Full Stack Developer (Self Learning)</h3>
+                        <p class="text-gray-400 mb-2 text-sm sm:text-base">2023 - Sekarang</p>
+                        <p class="text-gray-300 text-sm sm:text-base">
+                            Mulai belajar pengembangan web dari nol dengan PHP, JavaScript, Python, dan beberapa framework modern.
+                            Eksplorasi AI tools untuk bantu proses coding dan coba optimasi database biar aplikasi makin cepat dan ringan.
+                        </p>
+                    </div>
+            
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 transition-colors duration-300">
+                        <h3 class="text-lg sm:text-xl font-bold text-primary mb-2">Web Developer (Proyek Akademik & Pribadi)</h3>
+                        <p class="text-gray-400 mb-2 text-sm sm:text-base">2023</p>
+                        <p class="text-gray-300 text-sm sm:text-base">
+                            Fokus belajar frontend dan dasar backend. Sering pakai API eksternal buat ambil data di proyek-proyek kecil,
+                            baik itu untuk tugas kuliah maupun eksperimen mandiri. Cari pengalaman nyambungin front-end dengan data dari luar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div>
+                <h2 class="text-2xl sm:text-3xl font-bold mb-8 text-center scroll-animate">Pendidikan & Pelatihan</h2>
+                <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 transition-colors duration-300">
+                        <h3 class="text-lg sm:text-xl font-bold text-primary mb-2">Teknik Informatika</h3>
+                        <p class="text-gray-400 mb-2 text-sm sm:text-base">Mahasiswa Aktif | 2023 - Sekarang</p>
+                        <p class="text-gray-300 text-sm sm:text-base">
+                            Sedang membangun dasar kuat di pemrograman, struktur data, algoritma, dan prinsip pengembangan software. 
+                            Belajar ngoding dari nol dengan semangat tinggi dan terus berkembang.
+                        </p>
+                    </div>
+            
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 transition-colors duration-300">
+                        <h3 class="text-lg sm:text-xl font-bold text-primary mb-2">Pelatihan & Webinar Gratis</h3>
+                        <p class="text-gray-400 mb-2 text-sm sm:text-base">Self Learning Journey</p>
+                        <p class="text-gray-300 text-sm sm:text-base">
+                            Mengikuti berbagai seminar, webinar, dan pelatihan teknologi gratis dari platform seperti Dicoding, DQLab, Google Developer Student Clubs, 
+                            dan lainnya. Fokus pada AI tools (ChatGPT, Gemini, dll) untuk bantu proses pengembangan aplikasi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section pt-24 pb-16 px-4 min-h-screen">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-12 text-center scroll-animate">Technical Skills</h1>
+
+            <!-- Programming Languages -->
+            <div class="mb-16">
+                <h2 class="text-xl sm:text-2xl font-bold mb-8 text-primary scroll-animate">Programming Languages</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                    
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/cpp.png" alt="C++ Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold">C++</h3>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                            <div class="progress-bar bg-primary h-2 rounded-full" data-width="40"></div>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Intermediate - 40%</p>
+                    </div>
+            
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/php.png" alt="PHP Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold">PHP</h3>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                            <div class="progress-bar bg-primary h-2 rounded-full" data-width="72"></div>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Advanced - 72%</p>
+                    </div>
+            
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/js.png" alt="JavaScript Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold">JavaScript</h3>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                            <div class="progress-bar bg-primary h-2 rounded-full" data-width="70"></div>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Advanced - 70%</p>
+                    </div>
+            
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/html.png" alt="HTML Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold">HTML5</h3>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                            <div class="progress-bar bg-primary h-2 rounded-full" data-width="80"></div>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Expert - 80%</p>
+                    </div>
+            
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/css.png" alt="CSS Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold">CSS</h3>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                            <div class="progress-bar bg-primary h-2 rounded-full" data-width="70"></div>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Advanced - 70%</p>
+                    </div>
+            
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/python.png" alt="Python Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold">Python</h3>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                            <div class="progress-bar bg-primary h-2 rounded-full" data-width="50"></div>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Intermediate - 50%</p>
+                    </div>
+            
+                </div>
+            </div>
+
+            <!-- Frameworks -->
+            <div class="mb-16">
+                <h2 class="text-xl sm:text-2xl font-bold mb-8 text-primary scroll-animate">Frameworks & Libraries</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                    
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/laravel.png" alt="Laravel Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold">Laravel</h3>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                            <div class="progress-bar bg-green-500 h-2 rounded-full" data-width="77"></div>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Advanced - 77%</p>
+                    </div>
+            
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/tailwind.png" alt="TailwindCSS Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold">TailwindCSS</h3>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                            <div class="progress-bar bg-green-500 h-2 rounded-full" data-width="77"></div>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Advanced - 77%</p>
+                    </div>
+            
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 mr-4 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/bootstrap.png" alt="Bootstrap Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold">Bootstrap</h3>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                            <div class="progress-bar bg-green-500 h-2 rounded-full" data-width="77"></div>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-2">Advanced - 77%</p>
+                    </div>
+            
+                </div>
+            </div>
+
+            <!-- Database & Tools -->
+            <div class="mb-16">
+                <h2 class="text-xl sm:text-2xl font-bold mb-8 text-primary scroll-animate">Database & Office Tools</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                    
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg text-center scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex justify-center mb-4">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/mysql.png" alt="MySQL Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                        </div>
+                        <h3 class="text-md sm:text-lg font-bold mb-2">MySQL</h3>
+                        <p class="text-xs sm:text-sm text-gray-400">Database Management</p>
+                    </div>
+            
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg text-center scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex justify-center mb-4">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/word.png" alt="MS Word Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                        </div>
+                        <h3 class="text-md sm:text-lg font-bold mb-2">MS Word</h3>
+                        <p class="text-xs sm:text-sm text-gray-400">Document Processing</p>
+                    </div>
+            
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg text-center scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex justify-center mb-4">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/excel.png" alt="MS Excel Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                        </div>
+                        <h3 class="text-md sm:text-lg font-bold mb-2">MS Excel</h3>
+                        <p class="text-xs sm:text-sm text-gray-400">Data Analysis</p>
+                    </div>
+            
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg text-center scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex justify-center mb-4">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/powerpoint.png" alt="PowerPoint Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                        </div>
+                        <h3 class="text-md sm:text-lg font-bold mb-2">PowerPoint</h3>
+                        <p class="text-xs sm:text-sm text-gray-400">Presentations</p>
+                    </div>
+            
+                </div>
+            </div>
+
+            <!-- AI Tools -->
+            <div>
+                <h2 class="text-xl sm:text-2xl font-bold mb-8 text-primary scroll-animate">AI Tools & Platforms</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 mr-3 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/gpt.png" alt="PowerPoint Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold">ChatGPT</h3>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400">Advanced prompt engineering and integration</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 mr-3 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/gemini.png" alt="PowerPoint Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold">Gemini</h3>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400">Google's AI for development assistance</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 mr-3 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/Qwen Ai.png" alt="PowerPoint Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold">QWEN</h3>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400">Advanced AI model utilization</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 mr-3 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/gamma.png" alt="PowerPoint Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold">GAMMA</h3>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400">AI-powered presentation creation</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 mr-3 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/Grok.png" alt="PowerPoint Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold">Grok</h3>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400">X's AI assistant for development</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 sm:p-6 rounded-lg scroll-animate hover:bg-gray-750 hover:scale-105 transition-all duration-300 group">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 sm:w-16 sm:h-16 mr-3 transition-transform duration-300 group-hover:scale-110">
+                                <img src="./asset/other.jpg" alt="PowerPoint Logo" class="w-full h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300">
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold">Other AI Tools</h3>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400">Various AI platforms and APIs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section pt-24 pb-16 px-4 min-h-screen">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-12 text-center scroll-animate">My Projects</h1>
+
+            <!-- Featured Projects -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 scroll-animate hover:scale-105 transform">
+                    <img src="./asset/showcase1.jpeg" alt="E-commerce Platform" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Animeverse platform info anime</h3>
+                        <p class="text-gray-400 mb-4 text-sm sm:text-base">
+                            Website informasi anime bernama Ainmeverse yang saya bangun menggunakan PHP Laravel. Menampilkan fitur seperti daftar anime lengkap dengan detailnya,
+                            sistem pencarian, dan antarmuka user-friendly untuk pengguna.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-primary px-2 py-1 rounded text-xs">PHP</span>
+                            <span class="bg-primary px-2 py-1 rounded text-xs">Laravel</span>
+                            <span class="bg-primary px-2 py-1 rounded text-xs">MySQL</span>
+                            <span class="bg-primary px-2 py-1 rounded text-xs">TailwindCSS</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://animeverse.octagram.web.id/" target="_blank" class="text-primary hover:text-blue-400 transition duration-300 text-sm sm:text-base">Live Demo</a>
+                            <a href="https://github.com/itzluthfi/web_Q_UAS-Project" target="_blank" class="text-primary hover:text-blue-400 transition duration-300 text-sm sm:text-base">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 scroll-animate hover:scale-105 transform">
+                    <img src="./asset/Chatbot.jpeg" alt="Task Management System" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Chat Bot dengan API Consume</h3>
+                        <p class="text-gray-400 mb-4 text-sm sm:text-base">
+                            Aplikasi chatbot menggunakan Node.js dan OpenRouter API untuk koneksi ke berbagai model AI. 
+                            Didesain dengan antarmuka interaktif yang dilengkapi elemen Live2D, memberikan nuansa seperti berinteraksi dengan asisten digital bernyawa.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-600 px-2 py-1 rounded text-xs">JavaScript</span>
+                            <span class="bg-green-600 px-2 py-1 rounded text-xs">NODEjs</span>
+                            <span class="bg-green-600 px-2 py-1 rounded text-xs">L2D asset</span>
+                            <span class="bg-green-600 px-2 py-1 rounded text-xs">TailwindCSS</span>
+                            <span class="bg-green-600 px-2 py-1 rounded text-xs">AI API Integration</span>
+                        </div>
+                        <div class="flex space-x-4">
+                           
+                            <a href="https://github.com/BR1LL14N/chatbotlvlup.git" target="_blank" class="text-primary hover:text-blue-400 transition duration-300 text-sm sm:text-base">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 scroll-animate hover:scale-105 transform">
+                    <img src="./asset/peramalanharga.jpeg" alt="Data Analytics Dashboard" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Peramalan Harga Barang 5 Tahun Kedepan</h3>
+                        <p class="text-gray-400 mb-4 text-sm sm:text-base">
+                            Aplikasi prediksi harga berbasis web menggunakan JavaScript dan algoritma Linear Regression. 
+                            Menampilkan visualisasi data dalam bentuk grafik interaktif untuk mempermudah interpretasi hasil prediksi harga dalam jangka waktu 5 tahun ke depan.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-yellow-600 px-2 py-1 rounded text-xs">JavaScript</span>
+                            <span class="bg-yellow-600 px-2 py-1 rounded text-xs">HTML</span>
+                            <span class="bg-yellow-600 px-2 py-1 rounded text-xs">ChartJS</span>
+                            <span class="bg-yellow-600 px-2 py-1 rounded text-xs">Data Analitic Algorithm</span>
+                            <span class="bg-yellow-600 px-2 py-1 rounded text-xs">TailwindCSS</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/BR1LL14N/komrik.git" target ="_blank" class="text-primary hover:text-blue-400 transition duration-300 text-sm sm:text-base">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 scroll-animate hover:scale-105 transform">
+                    <img src="./asset/kalkulatorbeasiswa.jpeg" alt="AI Content Generator" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Kalkulator Beasiswa</h3>
+                        <p class="text-gray-400 mb-4 text-sm sm:text-base">
+                            Program prediksi kelulusan seleksi beasiswa berbasis algoritma Naive Bayes menggunakan JavaScript. 
+                            Memberikan rekomendasi otomatis berdasarkan kriteria seperti nilai, prestasi, dan kondisi sosial ekonomi siswa.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-600 px-2 py-1 rounded text-xs">JavaScript</span>
+                            <span class="bg-purple-600 px-2 py-1 rounded text-xs">HTML</span>
+                            <span class="bg-purple-600 px-2 py-1 rounded text-xs">TailwindCSS</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/BR1LL14N/kalkulatorbeasiswa.git" class="text-primary hover:text-blue-400 transition duration-300 text-sm sm:text-base">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 scroll-animate hover:scale-105 transform">
+                    <img src="./asset/wedding.jpeg" alt="Learning Management System" class="w-full h-48 object-cover hover:scale-110 transition-transform duration-300">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold mb-2">Web Undangan Pernikahan</h3>
+                        <p class="text-gray-400 mb-4 text-sm sm:text-base">
+                            Website undangan pernikahan sederhana yang dibuat hanya untuk iseng-iseng dan eksperimen desain. 
+                            Menggunakan Bootstrap untuk tampilan responsif dan estetik, dilengkapi dengan fitur seperti galeri foto, informasi acara, dan Google Maps lokasi.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-red-600 px-2 py-1 rounded text-xs">HTML</span>
+                            <span class="bg-red-600 px-2 py-1 rounded text-xs">CSS</span>
+                            <span class="bg-red-600 px-2 py-1 rounded text-xs">Bootstrap</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/BR1LL14N/webinvitewedding.git" class="text-primary hover:text-blue-400 transition duration-300 text-sm sm:text-base">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-16 scroll-animate">
+                <h2 class="text-xl sm:text-2xl font-bold mb-4">Mau Kolaborasi atau Ngobrol?</h2>
+                <p class="text-gray-400 mb-8 text-sm sm:text-base">Aku selalu terbuka buat diskusi soal project baru atau peluang kerja bareng.</p>
+                <a href="#contact" class="nav-link bg-primary hover:bg-blue-600 text-white px-6 sm:px-8 py-3 rounded-lg transition duration-300 hover:scale-105 transform" data-section="contact">
+                    Hubungi Aku Yuk!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section pt-24 pb-16 px-4 min-h-screen">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-12 text-center scroll-animate">Get In Touch</h1>
+
+            <div class="grid md:grid-cols-2 gap-8 sm:gap-12">
+                <!-- Contact Information -->
+                <div class="scroll-animate">
+                    <h2 class="text-xl sm:text-2xl font-bold mb-6 text-primary">Contact Information</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-center hover:bg-gray-800 p-3 rounded-lg transition-colors duration-300">
+                            <span class="text-xl sm:text-2xl mr-4">📧</span>
+                            <div>
+                                <h3 class="font-bold text-sm sm:text-base">Email</h3>
+                                <p class="text-gray-400 text-sm sm:text-base">brillian.alif@example.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center hover:bg-gray-800 p-3 rounded-lg transition-colors duration-300">
+                            <span class="text-xl sm:text-2xl mr-4">📱</span>
+                            <div>
+                                <h3 class="font-bold text-sm sm:text-base">Phone</h3>
+                                <p class="text-gray-400 text-sm sm:text-base">+62 123 456 7890</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center hover:bg-gray-800 p-3 rounded-lg transition-colors duration-300">
+                            <span class="text-xl sm:text-2xl mr-4">📍</span>
+                            <div>
+                                <h3 class="font-bold text-sm sm:text-base">Location</h3>
+                                <p class="text-gray-400 text-sm sm:text-base">Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center hover:bg-gray-800 p-3 rounded-lg transition-colors duration-300">
+                            <span class="text-xl sm:text-2xl mr-4">💼</span>
+                            <div>
+                                <h3 class="font-bold text-sm sm:text-base">LinkedIn</h3>
+                                <p class="text-gray-400 text-sm sm:text-base">linkedin.com/in/developer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="mt-8">
+                        <h3 class="text-lg sm:text-xl font-bold mb-4 text-primary">Follow Me</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 hover:scale-110 transition-all duration-300">
+                                <span class="text-lg sm:text-xl">🐙</span>
+                            </a>
+                            <a href="#" class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 hover:scale-110 transition-all duration-300">
+                                <span class="text-lg sm:text-xl">💼</span>
+                            </a>
+                            <a href="#" class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 hover:scale-110 transition-all duration-300">
+                                <span class="text-lg sm:text-xl">🐦</span>
+                            </a>
+                            <a href="#" class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 hover:scale-110 transition-all duration-300">
+                                <span class="text-lg sm:text-xl">📷</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="scroll-animate">
+                    <h2 class="text-xl sm:text-2xl font-bold mb-6 text-primary">Send Message</h2>
+                    <form class="space-y-6" action="#" method="POST" id="contact-form">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Full Name</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required
+                                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                                placeholder="Your full name"
+                            >
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required
+                                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                                placeholder="your.email@example.com"
+                            >
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject" 
+                                required
+                                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                                placeholder="Project inquiry, collaboration, etc."
+                            >
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="5" 
+                                required
+                                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                                placeholder="Tell me about your project or inquiry..."
+                            ></textarea>
+                        </div>
+                        <button 
+                            type="submit"
+                            class="w-full bg-primary hover:bg-blue-600 text-white py-3 px-6 rounded-lg transition-all duration-300 font-medium hover:scale-105 transform"
+                        >
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="mt-16 text-center scroll-animate">
+                <h2 class="text-2xl font-bold mb-4">Let's Build Something Amazing Together</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base">
+                    I'm always interested in new opportunities and exciting projects. Whether you need a full-stack developer, 
+                    AI integration specialist, or someone to help bring your ideas to life, I'd love to hear from you.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-400">&copy; 2024 Muhammad Brillian Alif. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        /* Section Management */
+        .section {
+            display: none;
+        }
+        
+        .section.active {
+            display: block;
+        }
+
+        /* Animations */
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        .animate-slide-up-delay {
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+        
+        .animate-fade-in-delay {
+            animation: fadeIn 1s ease-out 0.4s both;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes progress {
+            from { width: 0%; }
+            to { width: var(--progress-width); }
+        }
+
+        .animate-progress {
+            animation: progress 2s ease-out 0.5s both;
+        }
+        
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .scroll-animate.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Progress Bar Smooth Animation */
+        .progress-bar {
+            width: 0%;
+            transition: width 2.5s cubic-bezier(0.16, 1, 0.3, 1);
+            transform-origin: left;
+        }
+
+        .progress-bar.animate {
+            transition-delay: 0.3s;
+        }
+
+        /* Staggered Animation untuk Multiple Progress Bars */
+        .progress-bar:nth-of-type(1) { transition-delay: 0.1s; }
+        .progress-bar:nth-of-type(2) { transition-delay: 0.2s; }
+        .progress-bar:nth-of-type(3) { transition-delay: 0.3s; }
+        .progress-bar:nth-of-type(4) { transition-delay: 0.4s; }
+        .progress-bar:nth-of-type(5) { transition-delay: 0.5s; }
+        .progress-bar:nth-of-type(6) { transition-delay: 0.6s; }
+    </style>
+
+    <script>
+
+        // Smooth Progress Bar Animation
+        function animateProgressBars() {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            
+            progressBars.forEach((bar, index) => {
+                const targetWidth = bar.getAttribute('data-width');
+                
+                setTimeout(() => {
+                    bar.style.width = targetWidth + '%';
+                    bar.classList.add('animate');
+                }, index * 100); // Staggered animation dengan delay 100ms
+            });
+        }
+
+        // Trigger animation when skills section is visible
+        const skillsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        animateProgressBars();
+                    }, 500); // Delay 500ms setelah section terlihat
+                    skillsObserver.unobserve(entry.target); // Run only once
+                }
+            });
+        }, { threshold: 0.3 });
+
+        // Observe skills section - tambahkan di DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const skillsSection = document.getElementById('skills');
+            if (skillsSection) {
+                skillsObserver.observe(skillsSection);
+            }
+        });
+        // Section Navigation
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show target section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Update navigation active states
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('text-white', 'border-b-2', 'border-primary', 'bg-gray-700');
+                link.classList.add('text-gray-300');
+            });
+            
+            // Set active nav link
+            document.querySelectorAll(`[data-section="${sectionId}"]`).forEach(link => {
+                link.classList.remove('text-gray-300');
+                link.classList.add('text-white');
+                if (link.closest('.hidden.md\\:flex')) {
+                    link.classList.add('border-b-2', 'border-primary');
+                } else {
+                    link.classList.add('bg-gray-700');
+                }
+            });
+            
+            // Close mobile menu
+            document.getElementById('mobile-menu').classList.add('hidden');
+            
+            // Trigger scroll animations for new section
+            setTimeout(() => {
+                const animateElements = document.querySelectorAll(`#${sectionId} .scroll-animate`);
+                animateElements.forEach(el => {
+                    el.classList.add('show');
+                });
+            }, 100);
+
+            // Di dalam function showSection, tambahkan setelah setTimeout untuk scroll animations:
+            if (sectionId === 'skills') {
+                setTimeout(() => {
+                    animateProgressBars();
+                }, 800); // Delay lebih lama untuk skills section
+            }
+        }
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Navigation click handlers
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const sectionId = link.getAttribute('data-section') || link.getAttribute('href').substring(1);
+                if (sectionId && sectionId !== '#') {
+                    showSection(sectionId);
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, observerOptions);
+        
+        // Initialize scroll animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.scroll-animate');
+            animateElements.forEach(el => observer.observe(el));
+            
+            // Show home section by default
+            showSection('home');
+        });
+
+        // Contact form handler
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+        });
+
+        // Smooth scrolling for any remaining anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.length > 1) {
+                    e.preventDefault();
+                    const sectionId = href.substring(1);
+                    showSection(sectionId);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
